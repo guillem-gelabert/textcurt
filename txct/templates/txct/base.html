@@ -1,0 +1,33 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Text Curt</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Merriweather|Oswald|Monoton" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/txct.css' %}">
+    <script type="text/javascript" src="{% static 'js/txct.js' %}"></script>
+  </head>
+  <body>
+    <div id="menu">
+      <div id="logo">TX;CT</div>
+      <div id="snippett">
+        Lectures ràpides amb quètxup o mostassa, per gaudir de drets o d'asseguts.
+      </div>
+      <div id="vermell"></div>
+        <div id="durades">
+          <a href=""><div class="boto_durada" id="5">5</div></a>
+          <a href=""><div class="boto_durada" id="5">5</div></a>
+          <a href=""><div class="boto_durada" id="5">5</div></a>
+          <a href=""><div class="boto_durada" id="5">5</div></a>
+          <a href=""><div class="boto_durada" id="5">5</div></a>
+        </div>
+      </div>
+
+      {% block content %}
+      {% endblock %}
+
+    <div id="groc"></div>
+  </body>
+</html>

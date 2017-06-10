@@ -109,18 +109,20 @@ body {
 
 #groc {
   background-color: #ECD078;
-  height: 5px;
-  width: 10%;
-  display: inline-block;
-  position: absolute;
+  height: 50px;
+  width: 0%;
+  display: block;
+  position: fixed;
+  bottom: 0px;
+  left: 0px;
 }
 
 #vermell {
   background-color: #D95B43;
   height: 5px;
-  width: 90%;
-  display: inline-block;
-  position: absolute;
+  width: 100%;
+  display: block;
+  position: fixed;
   right: 0;
 }
 
@@ -131,10 +133,17 @@ body {
 }
 
 .titol {
-  text-decoration: none;
-  color: #542437;
   padding-top: 40px;
   font-size: 66px;
+}
+
+.titol a {
+  text-decoration: none;
+  color: #542437;
+}
+
+.titol a:hover {
+  text-decoration: underline;
 }
 
 .autor {

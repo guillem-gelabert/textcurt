@@ -2,7 +2,7 @@
 
 {% block content %}
       <div id="cos">
-      {% for text in texts %}
+        {% if text.published_date %}
           <div class="capcalera">
               <h1 class="titol"><a href="{% url "text_detail" pk=text.pk %}">{{ text.title }}</a></h1>
               <h2 class="autor">{{ text.writer }}</h2>
@@ -11,6 +11,6 @@
           <p></p>
               <p class="conte">{{ text.text|linebreaksbr }}</p>
               <img class="separador" src="http://burgerweek.co/wp-content/uploads/2017/02/BURGERPLACEHOLDER.png"/>
-      {% endfor %}
+      {% endif %}
     </div>
 {% endblock %}
