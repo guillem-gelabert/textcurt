@@ -1,3 +1,4 @@
 from django.shortcuts import render
 
-# Create your views here.
+def text_list(request):
+    return render(request, "txct/text_list.html", {})
