@@ -3,8 +3,8 @@ from django.utils import timezone
 
 
 class Text(models.Model):
-    published_by = models.ForeignKey('auth.User')
-    author = models.CharField(max_length=200)
+    author = models.ForeignKey('auth.User')
+    writer = models.CharField(max_length=200)
     title = models.CharField(max_length=200)
 
     text = models.TextField()
