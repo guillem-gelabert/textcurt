@@ -1,7 +1,13 @@
+{% load staticfiles %}
+
 <!DOCTYPE html>
 <html>
   <head>
     <title>Text Curt</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Merriweather|Oswald|Monoton" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/txct.css' %}">
+    <script type="text/javascript" src="{% static 'js/txct.js' %}"></script>
   </head>
   <body>
     <div id="menu">
@@ -12,22 +18,22 @@
       <div id="vermell"></div>
       <div id="groc"></div>
         <div id="durades">
-          <div class="durada" id="25">25</div>
-          <div class="durada" id="20">20</div>
-          <div class="durada" id="15">15</div>
-          <div class="durada" id="10">10</div>
-          <div class="durada" id="5">5</div>
+          <div class="boto_durada" id="25">25</div>
+          <div class="boto_durada" id="20">20</div>
+          <div class="boto_durada" id="15">15</div>
+          <div class="boto_durada" id="10">10</div>
+          <div class="boto_durada" id="5">5</div>
         </div>
       </div>
-
+      <div id="cos">
       {% for text in texts %}
-          <div>
-              <h1><a href="">{{ text.title }}</a></h1>
-              <h2>{{ text.writer}}</h2>
-              <p>durada: {{ text.read_time }}</p>
-              <p>{{ text.text|linebreaksbr }}</p>
+          <div class="capcalera">
+              <h1 class="titol"><a href="">{{ text.title }}</a></h1>
+              <h2 class="autor">{{ text.writer}}</h2>
+              <h3 class="durada">{{ text.read_time }} minuts</h3>
           </div>
+              <p class="conte">{{ text.text|linebreaksbr }}</p>
       {% endfor %}
-
+    </div>
   </body>
 </html>

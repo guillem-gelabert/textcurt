@@ -1,0 +1,160 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: #F2E9E1;
+}
+
+#menu {
+  position: fixed;
+  background-color: #008E9C;
+  z-index: 1;
+  width: 100%;
+  height: 133px;
+  margin: 0;
+  top: 0;
+  border-top: 60px;
+  color: white;
+  display: block;
+  box-shadow: 0px 0px 15px -3px black;
+}
+
+#logo {
+  font-family: "Monoton", sans-serif;
+  font-size: 60px;
+  text-align: left;
+  font-stretch: expanded;
+  padding: 20px;
+  margin-left: 20px;
+}
+
+#snippett {
+  transform: rotate(-2deg);
+  font-size: 23px;
+  font-style: italic;
+  line-height: 1,5;
+  position: absolute;
+  height: 80px;
+  width: 280px;
+  top:23px;
+  left: 280px;
+}
+
+#durades {
+  width: 450px;
+  position: absolute;
+  z-index: 3;
+  right: 36px;
+  top: 40px;
+}
+
+.boto_durada {
+  color: #B1DAE2;
+  font-family: "Oswald", sans-serif;
+  height: 40px;
+  width: 40px;
+  border-radius: 100%;
+  background-color: #008E9C;
+  border: 3px #53777A solid;
+  display: inline-block;
+  position: relative;
+  text-align: center;
+  margin-left: 33px;
+  line-height: 40px;
+  float: both;
+}
+
+.boto_durada:hover {
+  color: #008E9C;
+  background-color: #B1DAE2;
+}
+
+.boto_durada:active {
+  color: #D95B43;
+  background-color: #ECD078;
+  border: 3px #D95B43 solid;
+}
+
+#cos {
+  background-color: white;
+  margin: auto;
+  padding-top: 130px;
+  display: block;
+  width: 70%;
+}
+
+#cos p {
+  font-family: "Merriweather", serif;
+  font-size: 1.2em;
+  padding-left: 60px;
+  padding-right: 60px;
+  padding-bottom: 30px;
+  text-align: left;
+  line-height: 1,5;
+  color: #1C140D;
+  font-variant-ligatures: common-ligatures;
+}
+
+.separador {
+  width: 35px;
+  height: 35px;
+  padding: 70px;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+#groc {
+  background-color: #ECD078;
+  height: 5px;
+  width: 10%;
+  display: inline-block;
+  position: absolute;
+}
+
+#vermell {
+  background-color: #D95B43;
+  height: 5px;
+  width: 90%;
+  display: inline-block;
+  position: absolute;
+  right: 0;
+}
+
+.capcalera {
+  font-family: Oswald, sans-serif;
+  display: block;
+  text-align: center;
+}
+
+.titol {
+  text-decoration: none;
+  color: #542437;
+  padding-top: 40px;
+  font-size: 66px;
+}
+
+.autor {
+  color: #D95B43;
+  font-weight: lighter;
+  font-size: 32px;
+  display: inline-block;
+}
+
+#durada {
+  color: #ECD078;
+  font-weight: lighter;
+  font-size: 32px;
+  display: inline-block;
+  padding-left: 20px;
+}
+
+#conte p:first-child {
+  transform: rotate(-2deg);
+  padding-left: 75px;
+  padding-bottom: 60px;
+  color: #53777A;
+}
