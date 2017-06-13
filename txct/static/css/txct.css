@@ -28,6 +28,14 @@ body {
   font-stretch: expanded;
   padding: 20px;
   margin-left: 20px;
+  line-height: 133px;
+  display: inline;
+  top: 30px;
+}
+
+#logo a:hover, a:visited, a:link, a:active {
+    text-decoration: none;
+    color: inherit;
 }
 
 #snippett {

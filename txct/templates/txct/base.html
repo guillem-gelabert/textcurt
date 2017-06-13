@@ -11,17 +11,17 @@
   </head>
   <body>
     <div id="menu">
-      <div id="logo">TX;CT</div>
+      <a href="/" id="logo">TX;CT</a>
       <div id="snippett">
         Lectures ràpides amb quètxup o mostassa, per gaudir de drets o d'asseguts.
       </div>
       <div id="vermell"></div>
         <div id="durades">
-          <a href=""><div class="boto_durada" id="5">5</div></a>
-          <a href=""><div class="boto_durada" id="5">5</div></a>
-          <a href=""><div class="boto_durada" id="5">5</div></a>
-          <a href=""><div class="boto_durada" id="5">5</div></a>
-          <a href=""><div class="boto_durada" id="5">5</div></a>
+          <a href="{% url 'cinc' %}"><div class="boto_durada" id="5">5</div></a>
+          <a href="{% url 'deu' %}"><div class="boto_durada" id="10">10</div></a>
+          <a href="{% url 'quinze' %}"><div class="boto_durada" id="15">15</div></a>
+          <a href="{% url 'vint' %}"><div class="boto_durada" id="20">20</div></a>
+          <a href="{% url 'vinticinc' %}"><div class="boto_durada" id="25">25</div></a>
         </div>
       </div>
 

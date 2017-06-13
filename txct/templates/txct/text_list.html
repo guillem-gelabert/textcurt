@@ -1,4 +1,5 @@
 {% extends 'txct/base.html' %}
+{% load staticfiles %}
 
 {% block content %}
       <div id="cos">
@@ -10,7 +11,7 @@
           </div>
           <p></p>
               <p class="conte">{{ text.text|linebreaksbr }}</p>
-              <img class="separador" src="http://burgerweek.co/wp-content/uploads/2017/02/BURGERPLACEHOLDER.png"/>
+              <img class="separador" src="{% static 'img/BURGERPLACEHOLDER.png' %}"/>
       {% endfor %}
     </div>
 {% endblock %}
