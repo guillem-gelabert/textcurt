@@ -1,17 +1,18 @@
 $(document).ready(function() {
   $(window).scroll(function() {
-    if ($(this).scrollTop() > 75) {
-      $("#menu").fadeOut(100);
+    if ($(document).scrollTop() > 75) {
+      $("header").removeClass("large").addClass("small");
     } else {
-      $("#menu").fadeIn(100);
-    }
+      $("header").removeClass("small").addClass("large");
+    };
   });
 
   $(document).scroll(function(){
-
-    var window_height = $(window).height()
-    var document_height = $(document).height()
-    var remaining_time = $(document).scrollTop() / (document_height - window_height) * 100;
+    var window_height = $(window).height();
+    var document_height = $(document).height();
+    var remaining_time = ($(document).scrollTop() / (document_height - window_height) * 100).toFixed(2);
+    var remaining_min = (parseInt($("h3").html()) * (100-remaining_time) / 100).toFixed(0);
+    $("#percentage").text("Queden " + remaining_min + " minuts de lectura");
     $("#groc").css("width", remaining_time + "%");
   });
 });

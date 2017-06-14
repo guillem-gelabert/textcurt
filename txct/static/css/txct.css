@@ -7,38 +7,55 @@ body {
   background-color: #F2E9E1;
 }
 
-#menu {
+header #menu {
   position: fixed;
   background-color: #008E9C;
-  z-index: 1;
+  z-index: 10;
   width: 100%;
-  height: 133px;
+  min-width: 200px;
   margin: 0;
   top: 0;
-  border-top: 60px;
   color: white;
   display: block;
-  box-shadow: 0px 0px 15px -3px black;
 }
 
-#logo {
+header.large #menu {
+  height: 133px;
+}
+
+header.small #menu {
+  height: 50px;
+}
+
+header #logo {
   font-family: "Monoton", sans-serif;
-  font-size: 60px;
-  text-align: left;
   font-stretch: expanded;
-  padding: 20px;
+  display: inline;
+  float: left;
+  text-align: center;
+}
+
+header.large #logo {
+  font-size: 60px;
+  padding: 0px;
   margin-left: 20px;
   line-height: 133px;
-  display: inline;
-  top: 30px;
 }
 
-#logo a:hover, a:visited, a:link, a:active {
+header.small #logo {
+  font-size: 42px;
+  padding: 5px;
+  margin-left: 0px;
+  line-height: 42px;
+  top: 0px;
+}
+
+header #logo a:hover, a:visited, a:link, a:active {
     text-decoration: none;
     color: inherit;
 }
 
-#snippett {
+header #snippett {
   transform: rotate(-2deg);
   font-size: 23px;
   font-style: italic;
@@ -50,39 +67,83 @@ body {
   left: 280px;
 }
 
-#durades {
-  width: 450px;
+header.small #snippett {
+  display: none;
+}
+
+header #percentage {
+  color: white;
+  font-size: 23px;
+  font-style: italic;
+  line-height: 50px;
   position: absolute;
+  height: 40px;
+  width: 280px;
+  left: 280px;
+}
+
+header.large #percentage {
+  display: none;
+}
+
+header #durades {
+  width: 450px;
+  position: relative;
   z-index: 3;
+  float: right;
+}
+
+header.large #durades {
   right: 36px;
   top: 40px;
 }
 
-.boto_durada {
+header.small #durades {
+  right: -160px;
+  top: 5px;
+}
+
+header #boto_durada {
   color: #B1DAE2;
   font-family: "Oswald", sans-serif;
   height: 40px;
   width: 40px;
   border-radius: 100%;
   background-color: #008E9C;
-  border: 3px #53777A solid;
   display: inline-block;
   position: relative;
   text-align: center;
-  margin-left: 33px;
-  line-height: 40px;
-  float: both;
+  float: left;
 }
 
-.boto_durada:hover {
+header.large #boto_durada {
+  border: 3px #53777A solid;
+  margin-left: 33px;
+  line-height: 40px;
+}
+
+header.small #boto_durada {
+  border: 0px #53777A solid;
+  margin-left: 13px;
+  line-height: 40px;
+}
+
+header #boto_durada:hover {
   color: #008E9C;
   background-color: #B1DAE2;
 }
 
-.boto_durada:active {
+header #boto_durada:active {
   color: #D95B43;
   background-color: #ECD078;
+}
+
+header.large #boto_durada:active {
   border: 3px #D95B43 solid;
+}
+
+header.small #boto_durada:active {
+  border: 0px #D95B43 solid;
 }
 
 #cos {
@@ -115,23 +176,40 @@ body {
   display: block;
 }
 
-#groc {
+header #groc {
   background-color: #ECD078;
-  height: 50px;
-  width: 0%;
+  height: 5px;
+  width: 100%;
   display: block;
   position: fixed;
-  bottom: 0px;
-  left: 0px;
+  left: 0;
+  float: left;
 }
 
-#vermell {
+header #vermell {
   background-color: #D95B43;
   height: 5px;
   width: 100%;
   display: block;
   position: fixed;
   right: 0;
+  float: right;
+}
+
+header.large #groc {
+  top: 133px;
+}
+
+header.large #vermell {
+  top: 133px;
+}
+
+header.small #groc {
+  top: 50px;
+}
+
+header.small #vermell {
+  top: 50px;
 }
 
 .capcalera {
@@ -174,4 +252,8 @@ body {
   padding-left: 75px;
   padding-bottom: 60px;
   color: #53777A;
+}
+
+header, #menu, a, #logo, li, #snippett, #durades, #boto_durada, #groc, #vermell {
+  transition: all 200ms;
 }

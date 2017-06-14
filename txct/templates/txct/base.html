@@ -10,24 +10,25 @@
     <script type="text/javascript" src="{% static 'js/txct.js' %}"></script>
   </head>
   <body>
+  <header class="large">
     <div id="menu">
       <a href="/" id="logo">TX;CT</a>
-      <div id="snippett">
-        Lectures ràpides amb quètxup o mostassa, per gaudir de drets o d'asseguts.
-      </div>
+      <div id="snippett">Lectures ràpides amb quètxup o mostassa, per gaudir de drets o d'asseguts.</div>
+      <div id="percentage">Temps restant de lectura: </div>
       <div id="vermell"></div>
+      <div id="groc"></div>
         <div id="durades">
-          <a href="{% url 'cinc' %}"><div class="boto_durada" id="5">5</div></a>
-          <a href="{% url 'deu' %}"><div class="boto_durada" id="10">10</div></a>
-          <a href="{% url 'quinze' %}"><div class="boto_durada" id="15">15</div></a>
-          <a href="{% url 'vint' %}"><div class="boto_durada" id="20">20</div></a>
-          <a href="{% url 'vinticinc' %}"><div class="boto_durada" id="25">25</div></a>
+          <a href="{% url 'cinc' %}"><div id="boto_durada">5</div></a>
+          <a href="{% url 'deu' %}"><div id="boto_durada">10</div></a>
+          <a href="{% url 'quinze' %}"><div id="boto_durada">15</div></a>
+          <a href="{% url 'vint' %}"><div id="boto_durada">20</div></a>
+          <a href="{% url 'vinticinc' %}"><div id="boto_durada">25</div></a>
         </div>
       </div>
+    </header>
 
       {% block content %}
       {% endblock %}
 
-    <div id="groc"></div>
   </body>
 </html>
