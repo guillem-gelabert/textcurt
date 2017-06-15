@@ -12,7 +12,7 @@ $(document).ready(function() {
     var document_height = $(document).height();
     var remaining_time = ($(document).scrollTop() / (document_height - window_height) * 100).toFixed(2);
     var remaining_min = (parseInt($("h3").html()) * (100-remaining_time) / 100).toFixed(0);
-    $("#percentage").text("Queden " + remaining_min + " minuts de lectura");
+    $("#percentage").text("Es verbleiben " + remaining_min + " Leseminuten");
     $("#groc").css("width", remaining_time + "%");
   });
 });
