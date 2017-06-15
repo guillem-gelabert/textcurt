@@ -9,6 +9,9 @@ def text_list(request):
     texts = Text.objects.order_by('read_time')
     return render(request, 'txct/text_list.html', {'texts': texts})
 
+def index(request):
+    return render(request, 'txct/index.html')
+
 def text_detail(request, pk):
     text = get_object_or_404(Text, pk=pk)
     return render(request, 'txct/text_detail.html', {'text': text})

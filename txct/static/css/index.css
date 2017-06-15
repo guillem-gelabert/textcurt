@@ -1,0 +1,87 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  background-image: url("/static/img/fons.jpeg");
+  background-repeat: no-repeat;
+  background-position: center top;
+}
+
+#fons {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 142, 156, 0.91);
+}
+
+#envoltori {
+  position: relative;
+  top: 140px;
+  margin: auto;
+  text-align: center;
+}
+
+#logo {
+  color: white;
+  font-family: "Monoton", sans-serif;
+  font-size: 180px;
+  text-align: center;
+  font-stretch: expanded;
+  padding: 0px;
+  margin-left: 20px;
+  display: block;
+  line-height: 180px;
+}
+
+#snippett {
+  color: rgba(255,255,255,0.5);
+  font-size: 23px;
+  font-style: italic;
+  line-height: 1,5;
+  position: relative;
+  height: 80px;
+  width: 280px;
+  margin: auto;
+  display: block;
+  padding: 30px;
+}
+
+#durades {
+  width: 450px;
+  position: relative;
+  z-index: 3;
+  top: 40px;
+  display: block;
+  margin: auto;
+  padding: 30px;
+}
+
+#boto_durada {
+  color: #B1DAE2;
+  font-family: "Oswald", sans-serif;
+  height: 40px;
+  width: 40px;
+  border-radius: 100%;
+  background-color: #008E9C;
+  border: 3px #53777A solid;
+  display: inline-block;
+  position: relative;
+  text-align: center;
+  margin-left: 15px;
+  margin-right: 15px;
+  line-height: 40px;
+  float: both;
+}
+
+#boto_durada:hover {
+  color: #008E9C;
+  background-color: #B1DAE2;
+}
+
+#boto_durada:active {
+  color: #D95B43;
+  background-color: #ECD078;
+  border: 3px #D95B43 solid;
+}

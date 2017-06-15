@@ -2,7 +2,8 @@ from django.conf.urls import url
 from . import views
 
 urlpatterns = [
-    url(r'^$', views.text_list, name='text_list'),
+    url(r'^list/$', views.text_list, name='text_list'),
+    url(r'^$', views.index, name="index"),
     url(r'^text/(?P<pk>\d+)/$', views.text_detail, name='text_detail'),
     url(r'^cinc/$', views.text_5, name='cinc'),
     url(r'^deu/$', views.text_10, name='deu'),
