@@ -3,7 +3,7 @@ from django.shortcuts import render
 from django.utils import timezone
 from .models import Text
 from django.shortcuts import render, get_object_or_404
-
+import json
 
 def text_list(request):
     texts = Text.objects.order_by('read_time')
@@ -18,6 +18,7 @@ def text_detail(request, pk):
 
 def text_5(request):
     texts = Text.objects.filter(Q(read_time__gt=0) & Q(read_time__lte=6)).order_by("?")[0]
+    title = json.dumps(texts.title)
     return render(request, 'txct/text_5.html', {'texts': texts})
 
 def text_10(request):
