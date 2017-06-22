@@ -1,6 +1,6 @@
 $(document).ready(function() {
   $(window).scroll(function() {
-    if ($(document).scrollTop() > 75) {
+    if ($(document).scrollTop() > 235) {
       $("header").removeClass("large").addClass("small");
     } else {
       $("header").removeClass("small").addClass("large");

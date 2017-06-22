@@ -70,15 +70,34 @@ header.small #snippet {
   display: none;
 }
 
+header #source {
+  display: inline-block;
+  font-family: Oswald, sans-serif;
+  font-size: 23px;
+  line-height: 50px;
+  max-width: 33%;
+  height: 50px;
+  float: left;
+  padding-left: 20px;
+  overflow: hidden;
+}
+
+header #source #writer {
+  color: #ECD078;
+  padding-right: 5px;
+}
+
+header.large #source {
+  display: none;
+}
+
 header #percentage {
   color: white;
   font-size: 23px;
   font-style: italic;
-  line-height: 50px;
-  position: absolute;
-  height: 40px;
-  width: 280px;
-  left: 280px;
+  line-height: 55px;
+  float: left;
+  padding-left: 10px;
 }
 
 header.large #percentage {
@@ -86,19 +105,18 @@ header.large #percentage {
 }
 
 header #durades {
-  width: 450px;
-  position: relative;
+  position: absolute;
   z-index: 3;
   float: right;
 }
 
 header.large #durades {
-  right: 36px;
+  right: 10px;
   top: 40px;
 }
 
 header.small #durades {
-  right: -160px;
+  right: 10px;
   top: 5px;
 }
 
@@ -117,13 +135,13 @@ header #boto_durada {
 
 header.large #boto_durada {
   border: 3px #53777A solid;
-  margin-left: 33px;
+  margin-right: 33px;
   line-height: 40px;
 }
 
 header.small #boto_durada {
   border: 0px #53777A solid;
-  margin-left: 13px;
+  margin-right: 13px;
   line-height: 40px;
 }
 
