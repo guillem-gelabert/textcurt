@@ -1,0 +1,15 @@
+{% extends 'txct/base.html' %}
+{% load staticfiles %}
+
+{% block content %}
+      <div id="cos">
+          <div class="capcalera">
+              <h1 class="titol"><a href="#">{{ text.0.title }}</a></h1>
+              <h2 class="autor">{{ text.0.writer }}</h2>
+              <h3 class="durada">{{ text.0.read_time }} Minuten</h3>
+          </div>
+          <p></p>
+              <p class="conte">{{ text.0.text|linebreaksbr }}</p>
+              <img class="separador" src="{% static 'img/BURGERPLACEHOLDER.png' %}"/>
+    </div>
+{% endblock %}

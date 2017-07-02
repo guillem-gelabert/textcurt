@@ -87,7 +87,7 @@ header #source #writer {
   padding-right: 5px;
 }
 
-header.large #source {
+header.large #source {;
   display: none;
 }
 

@@ -14,16 +14,72 @@
     <div id="menu">
       <a href="/" id="logo">TX;CT</a>
       <div id="snippet">Lectures ràpides amb quètxup o mostassa, per gaudir de drets o d'asseguts.</div>
-      <div id="source"><span id="writer">{{ texts.writer }}.</span><span id="title">{{ texts.title }}.</span></div>
+      <div id="source"><span id="writer">{{ text.0.writer }}.</span><span id="title">{{ text.0.title }}.</span></div>
       <div id="percentage">Verbleibende Lesezeit: </div>
       <div id="vermell"></div>
       <div id="groc"></div>
         <div id="durades">
-          <a href="{% url 'cinc' %}"><div id="boto_durada">5</div></a>
-          <a href="{% url 'deu' %}"><div id="boto_durada">10</div></a>
-          <a href="{% url 'quinze' %}"><div id="boto_durada">15</div></a>
-          <a href="{% url 'vint' %}"><div id="boto_durada">20</div></a>
-          <a href="{% url 'vinticinc' %}"><div id="boto_durada">25</div></a>
+          <!-- BUTTON FIVE -->
+          <a href=
+          {% if request.path != "/cinc/" %}
+          "/cinc/?page=1"
+              {% else %}
+                {% if text.has_next %}
+              "?page={{ text.next_page_number }}"
+                {% else %}
+              "/cinc/?page=1"
+                {% endif %}
+              {% endif %}
+              ><div id="boto_durada">5</div></a>
+              <!-- BUTTON TEN -->
+              <a href=
+              {% if request.path != "/deu/" %}
+              "/deu/?page=1"
+                  {% else %}
+                    {% if text.has_next %}
+                  "?page={{ text.next_page_number }}"
+                    {% else %}
+                  "/deu/?page=1"
+                    {% endif %}
+                  {% endif %}
+                  ><div id="boto_durada">10</div></a>
+              <!-- BUTTON FIFTEEN -->
+              <a href=
+              {% if request.path != "/quinze/" %}
+              "/quinze/?page=1"
+                  {% else %}
+                    {% if text.has_next %}
+                  "?page={{ text.next_page_number }}"
+                    {% else %}
+                  "/quinze/?page=1"
+                    {% endif %}
+                  {% endif %}
+                  ><div id="boto_durada">15</div></a>
+              <!-- BUTTON TWENTY -->
+              <a href=
+              {% if request.path != "/vint/" %}
+              "/vint/?page=1"
+                  {% else %}
+                    {% if text.has_next %}
+                  "?page={{ text.next_page_number }}"
+                    {% else %}
+                  "/vint/?page=1"
+                    {% endif %}
+                  {% endif %}
+                  ><div id="boto_durada">20</div></a>
+
+              <!-- BUTTON TWENTYFIVE -->
+              <a href=
+              {% if request.path != "/vinticinc/" %}
+              "/vinticinc/?page=1"
+                  {% else %}
+                    {% if text.has_next %}
+                  "?page={{ text.next_page_number }}"
+                    {% else %}
+                  "/vinticinc/?page=1"
+                    {% endif %}
+                  {% endif %}
+                  ><div id="boto_durada">25</div></a>
         </div>
       </div>
     </header>
