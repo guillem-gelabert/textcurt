@@ -260,7 +260,7 @@ header.small #vermell {
   display: inline-block;
 }
 
-#durada {
+.durada {
   color: #ECD078;
   font-weight: lighter;
   font-size: 32px;

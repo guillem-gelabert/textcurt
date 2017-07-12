@@ -1,9 +1,14 @@
 {% load staticfiles %}
+{% load user_agents %}
 
 <!DOCTYPE html>
 <html>
   <head>
-    <link rel="stylesheet" type="text/css" href="{% static 'css/index.css' %}">
+    {% if request|is_mobile %}
+      <link rel="stylesheet" type="text/css" href="{% static 'css/m_index.css' %}">
+    {% else %}
+      <link rel="stylesheet" type="text/css" href="{% static 'css/index.css' %}">
+    {% endif %}
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Merriweather|Oswald|Monoton" rel="stylesheet">
   </head>
