@@ -5,11 +5,12 @@ from .models import Text
 from django.shortcuts import render, get_object_or_404
 import json
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
+from django_user_agents.utils import get_user_agent
 
 def base(request):
     context = {
         "title": texts.title,
-        "writer": texts.writer
+        "writer": texts.writer,
     }
     return render(request, "txct/base.html", context)
 

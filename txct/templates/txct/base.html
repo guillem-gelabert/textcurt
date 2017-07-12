@@ -1,4 +1,5 @@
 {% load staticfiles %}
+{% load user_agents %}
 
 <!DOCTYPE html>
 <html>
@@ -6,7 +7,11 @@
     <title>Text Curt</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Merriweather|Oswald|Monoton" rel="stylesheet">
+    {% if request|is_mobile %}
+      <link rel="stylesheet" href="{% static 'css/m_txct.css' %}">
+    {% else %}
     <link rel="stylesheet" href="{% static 'css/txct.css' %}">
+    {% endif %}
     <script type="text/javascript" src="{% static 'js/txct.js' %}"></script>
   </head>
   <body>
@@ -80,6 +85,7 @@
                     {% endif %}
                   {% endif %}
                   ><div id="boto_durada">25</div></a>
+
         </div>
       </div>
     </header>

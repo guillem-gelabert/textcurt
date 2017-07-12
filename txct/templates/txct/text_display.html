@@ -10,6 +10,11 @@
           </div>
           <p></p>
               <p class="conte">{{ text.0.text|linebreaksbr }}</p>
-              <img class="separador" src="{% static 'img/BURGERPLACEHOLDER.png' %}"/>
-    </div>
+              <div class="more">
+                <div id="time">Noch {{ text.0.read_time }} Minuten?</div>
+                <div id="author">Mehr von {{ text.0.writer}}?</div>
+              </div>
+              <div id=license></div>
+      </div>
+
 {% endblock %}

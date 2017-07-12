@@ -12,6 +12,7 @@ class Text(models.Model):
     published_date = models.DateTimeField(
             blank=True, null=True)
     read_time = models.IntegerField()
+
     def publish(self):
         self.published_date = timezone.now()
         self.save()
